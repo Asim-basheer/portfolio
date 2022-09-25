@@ -1,0 +1,29 @@
+// import fonts family from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+// global
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+// base
+@import './base/base';
+@import './base/reset';
+@import './base/helpers';
+
+// components
+@import './components/container';
+@import './components/navbar';
+@import './components/button';
+@import './components/social';
+@import './components/section-name';
+@import './components/content-home';
+@import './components/works-card';
+@import './components/navigation';
+@import './components/footer';
+//pages
+@import './pages/home';
+@import './pages/about';
+@import './pages/skills';
+@import './pages/works';
+@import './pages/contact';

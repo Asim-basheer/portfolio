@@ -1,0 +1,39 @@
+.footer {
+  font-size: 1.8rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.3rem;
+  font-weight: 700;
+
+  @include respond(sm) {
+    font-size: 1.6rem;
+  }
+
+  p {
+    @include respond(xs) {
+      line-height: 1.5;
+    }
+    br {
+      display: none;
+      @include respond(xs) {
+        display: block;
+      }
+    }
+  }
+
+  &.light {
+    background-color: $backgroundLightNavbar;
+    color: $textLight;
+    span {
+      color: $hoverColorLight;
+    }
+  }
+
+  &.dark {
+    background-color: $backgroundDark-1;
+    color: $textDark;
+    span {
+      color: $hoverColorDark;
+    }
+  }
+}

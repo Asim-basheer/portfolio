@@ -1,0 +1,37 @@
+.me {
+  margin-inline-end: 2rem;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.img-fluid {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-fluid-w {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.ftc {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.ttc {
+  text-transform: capitalize;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.tts {
+  text-transform: lowercase;
+}

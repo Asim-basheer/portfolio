@@ -1,0 +1,7 @@
+.about {
+  @include halfOfTheWidth;
+  &__paragraph {
+    text-align: justify;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,39 @@
+.works {
+  &__content {
+    text-align: center;
+  }
+
+  &__controls {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    &:focus {
+      transform: translateY(0px);
+      background-color: $hoverColorDark;
+      color: $textDark;
+      border: 1px solid $hoverColorDark;
+    }
+    &.light:focus {
+      transform: translateY(0px);
+      background-color: $hoverColorLight;
+      color: $textDark;
+      border: 1px solid $hoverColorLight;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+    gap: 4rem 3rem;
+
+    @include respond(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

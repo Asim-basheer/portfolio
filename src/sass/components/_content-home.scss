@@ -1,0 +1,33 @@
+.content-home {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  background-color: transparent;
+  color: $textDark;
+  @include respond(xs) {
+    padding-inline-end: 1.5rem;
+  }
+  &__heading {
+    line-height: 1.1;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+
+    @include respond(md) {
+      font-size: 5rem;
+    }
+
+    @include respond(xs) {
+      font-size: 3.1rem;
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: $textDark-80;
+    @include respond(xs) {
+      text-align: justify;
+    }
+  }
+}

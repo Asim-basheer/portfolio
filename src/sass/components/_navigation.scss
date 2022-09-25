@@ -1,0 +1,67 @@
+.navigation {
+  position: fixed;
+  color: $textDark;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  user-select: none;
+  background-color: $backgroundDark-1;
+  transition: $transition;
+  &.light {
+    background-color: $backgroundLightNavbar;
+    color: $textLight;
+  }
+
+  &.active {
+    z-index: 1000;
+    opacity: 1;
+    user-select: auto;
+  }
+
+  &__close-icon {
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    font-size: 4rem;
+    transition: $transition;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+      color: $hoverColorDark;
+    }
+    &.light:hover {
+      color: $hoverColorLight;
+    }
+  }
+  &__list {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: $transition;
+    background-color: transparent;
+
+    &:hover {
+      transform: translateX(0.5rem);
+      color: $hoverColorDark;
+    }
+
+    &.light:hover {
+      color: $hoverColorLight;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.skills {
+  @include halfOfTheWidth;
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    gap: 6rem 4rem;
+  }
+
+  &__icon {
+    &.html {
+      transform: translateY(-0.3rem);
+    }
+  }
+}

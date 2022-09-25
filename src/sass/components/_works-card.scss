@@ -1,0 +1,132 @@
+.works-card {
+  position: relative;
+  border-radius: 1rem;
+
+  &--border-white {
+    box-shadow: 0px 0.4rem 1rem rgba($textLight, 0.2);
+  }
+  &__img {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+  }
+
+  &__name {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+
+    @include respond(xs) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 1rem;
+    padding: 0 2rem;
+    @include respond(xs) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__tag {
+    border: 1px solid;
+    padding: 1.4rem 2rem 1.2rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    line-height: 0;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    &:hover {
+      background-color: $hoverColorDark;
+      color: $textDark;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+  }
+}
+
+// border nice effect
+.glow-on-hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  // cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover::before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    $textDark,
+    $textLight,
+    $textDark,
+    $textLight,
+    $textDark,
+    $textLight,
+    $textDark,
+    $textLight,
+    $textDark,
+    $textLight,
+    $textDark,
+    $textLight
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.glow-on-hover:active::after {
+  background: transparent;
+}
+
+.glow-on-hover::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

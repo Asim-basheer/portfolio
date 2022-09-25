@@ -1,0 +1,55 @@
+.navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 500;
+
+  &.light {
+    background-color: $backgroundLightNavbar;
+    color: $textLight;
+  }
+
+  &.dark {
+    background-color: $backgroundDark-1;
+    color: $textDark;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
+
+  &__burger-icon {
+    font-size: 3rem;
+    display: flex;
+    gap: 2rem;
+    transform: translateY(0.3rem);
+    svg {
+      transition: $transition;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    display: none;
+  }
+
+  &__link {
+    text-transform: uppercase;
+  }
+}

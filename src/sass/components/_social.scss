@@ -1,0 +1,39 @@
+.social {
+  &.social-home {
+    position: absolute;
+    top: 55%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    color: $textDark;
+    @include respond(xs) {
+      right: 50%;
+      transform: translateX(50%);
+      top: 90%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    &.social-home {
+      flex-direction: column;
+
+      @include respond(xs) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__links {
+    font-size: 2.5rem;
+    transition: $transition;
+    background-color: transparent;
+    &:hover {
+      color: $hoverColorDark;
+    }
+    &.light:hover {
+      color: $hoverColorLight;
+    }
+  }
+}

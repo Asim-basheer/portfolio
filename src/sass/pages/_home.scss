@@ -1,0 +1,61 @@
+.home {
+  background-color: $backgroundDark-2;
+  background-image: url(https://ik.imagekit.io/ievdkoh2e/background-dark_Yi8G-MimZ.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1660703079141);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+
+  @include respond(md) {
+    height: 90vh;
+  }
+  @include respond(sm) {
+    height: 80vh;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(#2c5364, 0.9),
+      rgba(#203a43, 0.9),
+      rgba(#0f2027, 0.9)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &.light {
+    background-color: $backgroundLight-2;
+    background-image: url(https://ik.imagekit.io/ievdkoh2e/wp4676576_wgbhXv9WF.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1660703079155);
+  }
+
+  &.light::before {
+    background: #373b44; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #4286f4,
+      #373b44
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(#4286f4, 0.9),
+      rgba(#373b44, 0.9)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &__container {
+    position: relative;
+    height: inherit;
+  }
+}

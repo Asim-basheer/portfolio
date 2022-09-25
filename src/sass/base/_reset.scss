@@ -1,0 +1,25 @@
+.dark {
+  background-color: $backgroundDark-2;
+  .text {
+    color: $textDark;
+  }
+  .text-light {
+    color: $textDark-80;
+  }
+  .background {
+    background-color: $backgroundDark-2;
+  }
+}
+
+.light {
+  background-color: $backgroundLight-2;
+  .text {
+    color: $textLight;
+  }
+  .text-light {
+    color: $textLight-80;
+  }
+  .background {
+    background-color: $backgroundLight-1;
+  }
+}
