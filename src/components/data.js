@@ -16,7 +16,7 @@ export const skillIcons = [
   {
     key: 'css',
     value:
-      'https://ik.imagekit.io/ievdkoh2e/css_zf5FKgnnL.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1660703208946',
+      'https://ik.imagekit.io/ievdkoh2e/portfolio/css-3-svgrepo-com_2HG3HcoTq.svg?updatedAt=1754857826893',
   },
   {
     key: 'sass',
@@ -177,7 +177,7 @@ export const workImages = [
 
 export const socialData = [
   {
-    href: 'https://www.linkedin.com/in/asim-basheer-77606b20b/',
+    href: 'https://www.linkedin.com/in/asim-alabtah-77606b20b/',
     Icon: FaLinkedinIn,
   },
   {
